@@ -1,0 +1,485 @@
+/*Cabeçalho início*/
+.header {
+    background-color: black;
+    margin-bottom: 0px;
+    text-align: center;
+    z-index:5;
+}
+
+.menu_area nav a {
+    color: white;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+.menu_area nav a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.logo {
+    width: 140px;
+}
+
+.header_area {
+    padding: 10px;
+}
+
+/*Cabeçalho fim*/
+
+/*Corpo da página início*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 98, 5vw;
+    height: 100vh;
+}
+
+.main {
+    background-image: url('images/background-branca.png');
+    /*background-size: cover;*/
+    width: 100%;
+}
+
+#perfil-nome > i:hover, #perfil-usuario > i:hover, #perfil-email > i:hover{
+    color: #01aaf8;
+}
+
+/*Corpo da página fim*/
+
+/*Rodapé início*/
+.footer {
+    background-color: black;
+    color: white;
+    margin-top: 0px;
+}
+
+.logo_footer {
+    width: 100%;
+    margin-right: 40px;
+}
+
+#copyright {
+    padding: 50px;
+    text-align: center;
+    font-size: x-large;
+}
+
+/*Rodapé fim*/
+
+/*Media Queries início*/
+@media screen and (max-width:370px) {
+    
+    .logo_footer {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    #copyright {
+        padding: 40px;
+        text-align: center;
+        display: none;
+    }
+
+    #imagensnovidades {
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+@media screen and (min-width:371px) and (max-width:426px) {
+
+    .logo_footer {
+        width: 90%;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
+
+    #copyright {
+        padding: 40px;
+        text-align: center;
+        display: none;
+    }
+
+    #imagensnovidades {
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+@media screen and (min-width:427px) and (max-width:768px) {
+
+    #imagensnovidades {
+        width: 100%;
+        height: 90%;
+
+    }
+
+    .logo_footer {
+        width: 100%;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    #copyright {
+        padding: 50px;
+        text-align: center;
+        font-size: medium;
+    }
+}
+
+
+@media screen and (min-width:539px) and (max-width:541px) {
+    #imagensnovidades {
+        width: 100%;
+        height: 90%;
+
+    }
+
+    .logo_footer {
+        width: 75%;
+        height: 85%;
+        align-items: center;
+        margin: 0 0 20px 0;
+    }
+
+    #copyright {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1200px) {
+
+    #imagensnovidades {
+        width: 100%;
+        height: 90%;
+
+    }
+
+    .logo_footer {
+        width: 100%;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #copyright {
+        padding: 50px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: x-large;
+    }
+}
+
+@media screen and (min-width:1201px) and (max-width:2500px) {
+    #imagensnovidades {
+        width: 100%;
+        height: 320px;
+
+    }
+
+    .logo_footer {
+        width: 100%;
+        align-items: center;
+    }
+
+    #copyright {
+        padding: 50px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: x-large;
+    }
+
+    #slogan{
+        background-image: url('images/img-background-a-nova-economia.jpg');
+        background-position-y: -240px;
+        background-size: cover;
+    }
+}
+
+/*Media Queries fim*/
+
+/*Template padrão Início*/
+#slogan {
+    width: 100%;
+    height: 95vh;
+    height: 320px;
+    padding: 40px 2%;
+    background-image: url('images/img-background-a-nova-economia.jpg');
+    background-size: cover;
+}
+
+.slogan {
+    text-align: center;
+    color: white;
+}
+
+.titulo-destaques {
+    text-align: center;
+}
+
+.card {
+    margin: 20px 20px 20px 20px;
+    display: inline-block;
+    border-radius: 15px;
+
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+}
+
+.botao {
+    margin: 10px auto;
+    text-align: center;
+    width: 300px;
+}
+
+/*Template padrão Fim*/
+
+/* Cadastre-se Início */
+
+input,
+label {
+    display: block;
+    width: 100%;
+}
+
+input:focus,
+label:focus {
+    outline: none;
+}
+
+main a {
+    color: blue;
+}
+
+#main-container {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#main-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* Set the border color to the desired color */
+.custom-toggler.navbar-toggler {
+    border-color: lightgreen;
+}
+
+.full-box {
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.half-box {
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing {
+    margin-right: 2.5%;
+}
+
+label {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#agreement {
+    margin-right: 5px;
+}
+
+#agreement,
+#agreement-label {
+    display: inline-block;
+    width: auto;
+}
+
+.error-validation {
+    position: absolute;
+    color: #FF1A1A;
+    top: 57px;
+    font-size: .8rem;
+
+}
+
+.template {
+    display: none;
+}
+
+.paragrafologin {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+/* Cadastre-se Fim */
+
+/* Sobre Início */
+
+#img-sobre {
+    margin: 30px 0 0 0;
+}
+
+#img-sobre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sobre {
+    background-color: black;
+    color: white;
+    margin: 10px 0px 0px 0px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.title-sobre {
+    text-align: center;
+}
+
+#card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+#card ul li {
+    margin-bottom: 5px;
+}
+
+/* Sobre Fim */
+
+/* Login Início */
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+main a:hover {
+    color: #08558B;
+}
+
+#login-container {
+    background-color: white;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+input:focus {
+    border-color: blue;
+}
+
+label,
+input {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+input {
+    border-bottom: 2px solid #323232;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border-bottom: 2px solid #08558B;
+}
+
+#forgot-pass {
+    text-align: right;
+    display: block;
+}
+
+input[type="submit"] {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #08558B;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1B223C;
+    transition: .5s;
+}
+
+#register-container p {
+    margin-bottom: 10px;
+}
+
+/* Login Fim */
