@@ -25,6 +25,7 @@ const doFilter = (filtro, tipoDoFiltro) => {
         return response.json();
       })
       .then(function (jsondata) {
+        lugaresAtuais = jsondata.lugares
         atualizarHTML(jsondata.lugares, filtro, tipoDoFiltro)
       });
   } else {
@@ -46,18 +47,16 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
   } else {
     console.log('⛔️ Object is falsy');
   }
-
   // se esse argumento for passado, queremos filtrar ou pesquisar
-  if (filterOrSearch) {
+  if (filterOrSearch !== undefined) {
     // se for passado o argumento filterType, se trata de um filtro
-    if (filterType) {
+    if (filterType !== undefined) {
       removerFiltros.style.display = "block";
       switch (filterType) {
         case 'tipo':
-
+          lugaresAtuais = lugaresAtuais.filter((item) => item.tipo == filterOrSearch);
           for (let i = 0; i < tam; i++) {
-            if (filterOrSearch == dbLugares[i].tipo) {
-              lugaresAtuais.push(dbLugares[i])
+            if (filterOrSearch == dbLugares[i].tipo) { // se filtro é encontrado dentro de da string dbLugares[i].tipo
               strHtml +=
                 `
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
@@ -68,7 +67,7 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
                         <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
                         <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
                         <p><b>Região: </b>${dbLugares[i].regiao}</p>
-                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${i}">Saiba Mais</button>
+                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${dbLugares[i].nome}">Saiba Mais</button>
                     </div>
                 </div>
                 </div>
@@ -80,10 +79,10 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
           break;
 
         case 'custo':
-
+          lugaresAtuais = lugaresAtuais.filter((item) => item.custo == filterOrSearch);
           for (let i = 0; i < tam; i++) {
             if (filterOrSearch == dbLugares[i].custo) {
-              lugaresAtuais.push(dbLugares[i])
+              //lugaresAtuais.push(dbLugares[i])
               strHtml +=
                 `
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
@@ -94,7 +93,7 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
                         <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
                         <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
                         <p><b>Região: </b>${dbLugares[i].regiao}</p>
-                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${i}">Saiba Mais</button>
+                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${dbLugares[i].nome}">Saiba Mais</button>
                     </div>
                 </div>
                 </div>
@@ -106,10 +105,10 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
           break;
 
         case 'regiao':
-
+          lugaresAtuais = lugaresAtuais.filter((item) => item.regiao == filterOrSearch);
           for (let i = 0; i < tam; i++) {
             if (filterOrSearch == dbLugares[i].regiao) {
-              lugaresAtuais.push(dbLugares[i])
+              //lugaresAtuais.push(dbLugares[i])
               strHtml +=
                 `
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
@@ -120,7 +119,7 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
                         <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
                         <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
                         <p><b>Região: </b>${dbLugares[i].regiao}</p>
-                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${i}">Saiba Mais</button>
+                        <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${dbLugares[i].nome}">Saiba Mais</button>
                     </div>
                 </div>
                 </div>
@@ -132,33 +131,30 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
           break;
       }
 
-
     }
-    // se não, se trata de uma pesquisa
-    else {
-      for (let i = 0; i < tam; i++) {
-        if (dbLugares[i].nome.toLowerCase().includes(filterOrSearch.toLowerCase())) {
-          strHtml +=
-            `
-            <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-            <div class="card" id="${dbLugares[i].tipo}" style="max-width: 100%; max-height: 100%;">
-                <img src="${dbLugares[i].linkImage1}" class="card-img-top">
-                <div class="card-body">
-                    <h4 class="card-title">${dbLugares[i].nome}</h4>
-                    <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
-                    <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
-                    <p><b>Região: </b>${dbLugares[i].regiao}</p>
-                    <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${i}">Saiba Mais</button>
-                </div>
-            </div>
-            </div>
+
+    for (let i = 0; i < tam; i++) {
+
+      if (dbLugares[i].nome.toLowerCase().includes(filterOrSearch.toLowerCase())) {
+        strHtml +=
           `
-        }
+              <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+              <div class="card" id="${dbLugares[i].tipo}" style="max-width: 100%; max-height: 100%;">
+                  <img src="${dbLugares[i].linkImage1}" class="card-img-top">
+                  <div class="card-body">
+                      <h4 class="card-title">${dbLugares[i].nome}</h4>
+                      <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
+                      <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
+                      <p><b>Região: </b>${dbLugares[i].regiao}</p>
+                      <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${dbLugares[i].nome}">Saiba Mais</button>
+                  </div>
+              </div>
+              </div>
+            `
       }
     }
-  }
-  // se não, mostraremos o conteúdo completo
-  else {
+
+  } else {
     for (let i = 0; i < tam; i++) {
       strHtml +=
         `
@@ -170,7 +166,7 @@ const atualizarHTML = (dbLugares, filterOrSearch, filterType) => {
                   <p><b>Tipo: </b>${dbLugares[i].tipo}</p>
                   <p style="color: #16a34a"><strong>${dbLugares[i].custo}</strong></p>
                   <p><b>Região: </b>${dbLugares[i].regiao}</p>
-                  <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${i}">Saiba Mais</button>
+                  <button class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#modal-lugar" id="${dbLugares[i].nome}">Saiba Mais</button>
               </div>
           </div>
           </div>
@@ -232,18 +228,18 @@ function preencherPaginaHTML(lugar) {
 
 const saibaMais = (event) => {
   if (event.target.type == 'button') {
-    const index = event.target.id
-    if (lugaresAtuais.length == 0) {
-      fetch("./lugares.json")
-        .then(response => {
-          return response.json();
-        })
-        .then(function (jsondata) {
-          preencherPaginaHTML(jsondata.lugares[index])
-        });
-    } else {
-      preencherPaginaHTML(lugaresAtuais[index])
-    }
+    const nome = event.target.id
+    fetch("./lugares.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(function (jsondata) {
+        for (let i = 0; i < (jsondata.lugares).length; i++) {
+          if (jsondata.lugares[i].nome == nome) {
+            preencherPaginaHTML(jsondata.lugares[i])
+          }
+        }
+      });
   }
 }
 
@@ -259,14 +255,21 @@ document.querySelector('#dropdown-item-custo1').addEventListener('click', () => 
 document.querySelector('#dropdown-item-custo2').addEventListener('click', () => { doFilter('$$', 'custo') })
 document.querySelector('#dropdown-item-custo3').addEventListener('click', () => { doFilter('$$$', 'custo') })
 
-document.querySelector('#dropdown-item-central').addEventListener('click', () => { doFilter('Central', 'regiao') })
-document.querySelector('#dropdown-item-sul').addEventListener('click', () => { doFilter('Sul', 'regiao') })
+document.querySelector('#dropdown-item-centro').addEventListener('click', () => { doFilter('Centro', 'regiao') })
+document.querySelector('#dropdown-item-ptb').addEventListener('click', () => { doFilter('PTB', 'regiao') })
 document.querySelector('#dropdown-item-norte').addEventListener('click', () => { doFilter('Norte', 'regiao') })
-document.querySelector('#dropdown-item-leste').addEventListener('click', () => { doFilter('Leste', 'regiao') })
+document.querySelector('#dropdown-item-citrolandia').addEventListener('click', () => { doFilter('Citrolândia', 'regiao') })
 
-//Botão de pesquisa
+//Pesquisa
+let search = document.querySelector('#search-input')
+
+search.addEventListener("keypress", function (e) {
+  if (e.key === 'Enter') {
+    onSearch(search.value)
+  }
+});
+
 document.querySelector('#btn-search').addEventListener('click', () => {
-  let search = document.querySelector('#search-input')
   onSearch(search.value)
 })
 
@@ -278,22 +281,4 @@ let DropdownRegiao = document.querySelector('#navbarDropdownRegiao')
 //Botão de remover filtros
 let removerFiltros = document.querySelector('#btn-remover-filtros')
 
-document.querySelector('#btn-remover-filtros').addEventListener('click', () => {
-  //atualiza o HTML com todos os lugares
-  fetch("./lugares.json")
-    .then(response => {
-      return response.json();
-    })
-    .then(function (jsondata) {
-      atualizarHTML(jsondata.lugares)
-    });
-  // tira estilo dos dropdown
-  DropdownTipo.innerHTML = "Tipo";
-  DropdownTipo.classList.remove("text-success");
-  DropdownCusto.innerHTML = "Custo";
-  DropdownCusto.classList.remove("text-success");
-  DropdownRegiao.innerHTML = "Região";
-  DropdownRegiao.classList.remove("text-success");
-  // esconde botão
-  removerFiltros.style.display = "none";
-})
+
