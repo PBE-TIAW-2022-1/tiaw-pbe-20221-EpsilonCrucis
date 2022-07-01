@@ -218,15 +218,15 @@
         },
         {
             "id": 19,
-            "nome": "After Pub",
-            "endereco": "Av. das Acácias - Industrial São Luiz",
+            "nome": "Kartódromo Internacional de Betim",
+            "endereco": "Av. Adutora Várzea das Flores, 477 - Itacolomi",
             "tipo": "Amigos",
-            "descricao": "O Pub mais estiloso da cidade. Gente bonita, cerveja gelada, grandes bandas, ambiente diferenciado e o melhor atendimento para você.",
+            "descricao": "Mais que uma pista de competições, o Kartódromo Internacional de Betim é também um ponto de encontro de famílias e amigos, já que conta com lanchonete e área gourmet, restaurante e playground para as crianças. O Kartódromo atualmente sedia e organiza competições profissionais, amadoras, e também corridas abertas, onde todos podem participar. Para pilotar um kart não é necessário ter experiência. Antes das corridas são passadas instruções de pilotagem e de segurança no chamado briefing.",
             "custo": "$$$",
             "regiao": "Norte",
-            "linkImage1": "https://lh3.ggpht.com/p/AF1QipMXIOqObeV5IaJSz0FqkjsKblqgO_7oLt2hHHtD=s1536",
-            "linkImage2": "https://lh3.ggpht.com/p/AF1QipMIGol4kFhg9F42McS2EiTE64hlDhTkoe0w9NvW=s1536",
-            "linkImage3": "https://lh5.googleusercontent.com/p/AF1QipNElGf4iYJ32ACTkjoYDJjI2JSD8o80dTLVwGvV=s508-k-no"
+            "linkImage1": "https://lh3.ggpht.com/p/AF1QipP4P5RNeS8zzTtL0KLVHtkBLJWNGPbNiXAaed2M=s1024",
+            "linkImage2": "https://lh3.ggpht.com/p/AF1QipOn9FWLxuYRbHoz2cztFQ0Wdcctc9KZ4tmqmLfT=s1536",
+            "linkImage3": "https://lh3.ggpht.com/p/AF1QipPFn6QKrg6_ixS6flzF6OBkZuKi41aN0JwSI_eu=s1536"
         },
         {
             "id": 20,
@@ -253,16 +253,16 @@
             "linkImage3": "https://lh3.ggpht.com/p/AF1QipPzxpAhubVEtpvRjoGBByMgE9Xy6S1HonfsQ8zC=s512"
         },
         {
-            "id": 22,
-            "nome": "Floresta Beer Bar",
-            "endereco": "R. Santa Cruz, 403 - Centro",
-            "tipo": "Amigos",
-            "descricao": "Variedades de Chopp e Drink🍻 Porções 😋🧆, Música ao vivo🎤🎶 Venha se divertir com a gente😎",
-            "custo": "$",
+            "id": 29,
+            "nome": "Dona Fulô",
+            "endereco": "R. do Rosário, 167 - Angola",
+            "tipo": "Casal",
+            "descricao": "Servir comida típica nordestina, proporcionando aos clientes uma experiência gastronômica inesquecível através do sabor e da qualidade dos pratos, em um ambiente agradável e familiar, de forma sustentável; esta é a missão do Dona Fulô.",
+            "custo": "$$",
             "regiao": "Centro",
-            "linkImage1": "images/FlorestaBeer3.jpg",
-            "linkImage2": "images/FlorestaBeer.jpg",
-            "linkImage3": "images/FlorestaBeer2.jpg"
+            "linkImage1": "https://lh3.ggpht.com/p/AF1QipMYeWkvIrB2s-vG8Zvm6Py1HYSk0DbNohe8zqbx=s1024",
+            "linkImage2": "https://lh3.ggpht.com/p/AF1QipMRyVrs8_sNoNAoUONriGrGDscCwM9dPgzzOHNl=s1024",
+            "linkImage3": "https://lh3.ggpht.com/p/AF1QipOnvtT-InbQignM0fAjUHrdAGcpfi8p25-1xy00=s1024"
         },
         {
             "id": 23,
@@ -299,6 +299,54 @@
             "linkImage1": "https://lh3.ggpht.com/p/AF1QipNmIsXhZ70uRF9zDBNVA_HtfvHk-u8wfJEy0QtU=s1024",
             "linkImage2": "https://scontent.fplu17-1.fna.fbcdn.net/v/t1.6435-9/153789081_3009801819300194_4849521096506685714_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9267fe&_nc_ohc=wYgt9g9xxdwAX90MNd4&_nc_ht=scontent.fplu17-1.fna&oh=00_AT9McpmLTi0HrJqKPtSWpIrcB41Bk6iVlnjXg_TnOnc9Vw&oe=62C93BF4",
             "linkImage3": "https://scontent.fplu17-1.fna.fbcdn.net/v/t1.6435-9/133603643_2964806623799714_75552244041256338_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9267fe&_nc_ohc=b0YKANuxUVkAX98n4Vy&_nc_ht=scontent.fplu17-1.fna&oh=00_AT8jXjhIJLJ5C1IA0uFnHoe7KkTMJp8KxYAHunNLqv3GHA&oe=62C9985D"
-        }
+        },
+        {
+            "id": 26,
+            "nome": "Betinho Do Sanduiche",
+            "endereco": "Av. Artur da Silva Bernardes, 203 - Ingá",
+            "tipo": "Amigos",
+            "descricao": "Desde de 2010 o Betinho do Sanduíche está presente no dia a dia dos Betinenses, trazendo comida de qualidade com conforto e bom atendimento. Visitantes podem experimentar tamboril ótimo. O ambiente quieto cria um clima relaxante para os clientes neste restaurante de fast food.",
+            "custo": "$",
+            "regiao": "Centro",
+            "linkImage1": "https://lh3.ggpht.com/p/AF1QipP9HmnMQ9-7Yfoe-ZW4kEywMCu0ukkj9uQIE-ms=s1024",
+            "linkImage2": "https://lh3.ggpht.com/p/AF1QipOa8kTGCwSPJUx9ILu3saEkGKVxntMShZsS4zg1=s1024",
+            "linkImage3": "https://lh3.ggpht.com/p/AF1QipNkbQHJI0Stnv6ixtfblkUHJDANfc2k7TGTRmd5=s1024"
+        },
+        {
+            "id": 27,
+            "nome": "Churrascaria e Pizzaria Fazenda Vigano",
+            "endereco": "Av. Edmeia Matos Lazzarotti, 1930 - Jardim da Cidade",
+            "tipo": "Família",
+            "descricao": "Vindo de uma geração da organização Viganó e Viganó, que hoje temos um histórico desde 1970. Especializado na demanda de churrasco a rodizio, self.service, eventos empresariais, casamentos, etc, trabalhando com os melhores cortes nobres da carne bovina , suina , aves e cordeiro. Mesa de frios com uma ótima variedade e buffet de pratos quentes.",
+            "custo": "$$$",
+            "regiao": "Centro",
+            "linkImage1": "https://lh3.ggpht.com/p/AF1QipO2wNRHUJF6hnxrFBV-Rzk7qCR4QLILacE-R4Q=s512",
+            "linkImage2": "https://lh3.ggpht.com/p/AF1QipN1As9u1mi5WrP3GwQffAY82lHUKCu6-rhGViH7=s1024",
+            "linkImage3": "https://lh3.ggpht.com/p/AF1QipM-dAUozmwxyArzX1bZgp4HoA75mX8015tbcy-z=s512"
+        },
+        {
+            "id": 28,
+            "nome": "Floresta Beer Bar",
+            "endereco": "R. Santa Cruz, 403 - Centro",
+            "tipo": "Amigos",
+            "descricao": "Variedades de Chopp e Drink🍻 Porções 😋🧆, Música ao vivo🎤🎶 Venha se divertir com a gente😎",
+            "custo": "$",
+            "regiao": "Centro",
+            "linkImage1": "images/FlorestaBeer3.jpg",
+            "linkImage2": "images/FlorestaBeer.jpg",
+            "linkImage3": "images/FlorestaBeer2.jpg"
+        },
+        {
+            "id": 29,
+            "nome": "After Pub",
+            "endereco": "Av. das Acácias - Industrial São Luiz",
+            "tipo": "Amigos",
+            "descricao": "O Pub mais estiloso da cidade. Gente bonita, cerveja gelada, grandes bandas, ambiente diferenciado e o melhor atendimento para você.",
+            "custo": "$$$",
+            "regiao": "Norte",
+            "linkImage1": "https://lh3.ggpht.com/p/AF1QipMXIOqObeV5IaJSz0FqkjsKblqgO_7oLt2hHHtD=s1536",
+            "linkImage2": "https://lh3.ggpht.com/p/AF1QipMIGol4kFhg9F42McS2EiTE64hlDhTkoe0w9NvW=s1536",
+            "linkImage3": "https://lh5.googleusercontent.com/p/AF1QipNElGf4iYJ32ACTkjoYDJjI2JSD8o80dTLVwGvV=s508-k-no"
+        } 
     ]
 }
